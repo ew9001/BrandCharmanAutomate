@@ -143,3 +143,8 @@
 2015-02-10 19:54:06,051 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/src/main/resources
 2015-02-10 19:54:06,052 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-02-10 19:54:06,053 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/src/test/resources
+2015-02-10 19:57:59,306 [Worker-37] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.trihonda.test:request.quote:0.0.1-SNAPSHOT @ /Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/pom.xml.
+2015-02-10 19:57:59,785 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-02-10 19:57:59,785 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/src/main/resources
+2015-02-10 19:57:59,787 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-02-10 19:57:59,787 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/src/test/resources

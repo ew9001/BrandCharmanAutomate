@@ -105,7 +105,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suiteFile}</suiteXmlFile>
+                            <suiteXmlFile>add2cartIE10.xml</suiteXmlFile>
+                        <suiteXmlFile>add2cartSafari.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
