@@ -87,3 +87,6 @@ java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfigu
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2015-02-10 20:11:25.635
 !MESSAGE No projects found for [/Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/add2cartIE10.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-02-10 20:19:52.850
+!MESSAGE No projects found for [/Users/agolubev1/Desktop/BrandCharmanAutomate/charmin/add2cartIE10.xml]
