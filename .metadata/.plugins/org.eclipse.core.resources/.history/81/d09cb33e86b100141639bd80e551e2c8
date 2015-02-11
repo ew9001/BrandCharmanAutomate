@@ -108,7 +108,11 @@ public class AddToCart {
 		  
 		
 		  
-		 
+		  else if (browser.equals("mobileRazor")) {
+			  driver=mobileRazor();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
 		  
 		  else if (browser.equals("tabletSamsungGalaxyNote")) {
 			  driver=tabletSamsungGalaxyNote();
@@ -128,7 +132,11 @@ public class AddToCart {
 			  System.out.println("Data is  " +data2);
 			}
 		  
-		 
+		  else if (browser.equals("mobileXperia")) {
+			  driver=mobileXperia();
+			  csvFileToRead = data2;
+			  System.out.println("Data is  " +data2);
+			}
 		  
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
