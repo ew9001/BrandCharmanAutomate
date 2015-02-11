@@ -30,7 +30,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class AddCartTest {
+public class AddToCart {
 	private static WebDriver driver;
 	 
 	 public static final String USERNAME = "zaqwsx1";
@@ -40,19 +40,20 @@ public class AddCartTest {
 	 
 	  public String browser_type;
 	  public String fail,error,url,rotate;
-	  public String baseUrl = "http://stage.coffee-mate.com";
-		
+	  public String baseUrl = "http://uat.charmin.pgsitecore.com";
+	  	
 		static String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 	    int counter=1;
+	    
 		String local=(new java.io.File("").getAbsolutePath());
 		String data="" + local + "/" + "product_list.csv";	
 		String data2="" + local + "/" + "product_list.csv";	
 		String myTitle;
 		String csvFileToRead;
 	    String safe = "http://10.10.10.34:8080/job/TESTNG3/ws/PageLoads";
-	  @Test(groups = {"create"})
-		@Parameters({"browser"})
-	  @BeforeClass
+	    @Test(groups = {"create"})
+	  		@Parameters({"browser"})
+	  	  @BeforeClass
 	  public void beforeClass(String browser) throws IOException, InterruptedException
 	  {	   
 		  
@@ -107,11 +108,7 @@ public class AddCartTest {
 		  
 		
 		  
-		  else if (browser.equals("mobileRazor")) {
-			  driver=mobileRazor();
-			  csvFileToRead = data2;
-			  System.out.println("Data is  " +data2);
-			}
+		 
 		  
 		  else if (browser.equals("tabletSamsungGalaxyNote")) {
 			  driver=tabletSamsungGalaxyNote();
@@ -131,11 +128,7 @@ public class AddCartTest {
 			  System.out.println("Data is  " +data2);
 			}
 		  
-		  else if (browser.equals("mobileXperia")) {
-			  driver=mobileXperia();
-			  csvFileToRead = data2;
-			  System.out.println("Data is  " +data2);
-			}
+		 
 		  
 		  else if (browser.equals("mobileiPhone5S")) {
 			  driver=mobileiPhone5S();
@@ -243,67 +236,37 @@ public class AddCartTest {
 		    File dir = new File("/users/agolubev1/Desktop/RondAndroid");
 		
 		    int lineNumber = 0;
-
-		    br = new BufferedReader(new FileReader(csvFileToRead));  
+		    driver.get(baseUrl + "/en-us/shop-products");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.get(baseUrl + "/en-us/content/d/f/5/ultra-soft");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
+		    driver.findElement(By.id("imgCloseButton")).click();
+		    driver.get(baseUrl + "/en-us/content/5/b/f/sensitive");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
+		    driver.findElement(By.id("imgCloseButton")).click();
+		    driver.get(baseUrl + "/en-us/content/b/e/d/basic");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
+		    driver.findElement(By.id("imgCloseButton")).click();
+		    driver.get(baseUrl + "/en-us/content/f/2/3/chamomile");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
+		    driver.findElement(By.id("imgCloseButton")).click();
+		    driver.get(baseUrl + "/en-us/content/c/0/8/freshmates");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
+		    driver.findElement(By.id("imgCloseButton")).click();
+		    driver.get(baseUrl + "/en-us/content/a/e/2/ultra-strong");
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		    driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
+		    driver.findElement(By.id("imgCloseButton")).click();
+		    driver.get(baseUrl + "/en-us/shopping-cart");
+		    Thread.sleep(5000);
+		    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		    
-		    while ((line = br.readLine()) != null) {
-		  	  
-		        System.out.println("The URL is " + counter);
-		        String [] nextLine = line.split(",");
-		        // nextLine[] is an array of values from the line
-		        System.out.println(nextLine[lineNumber]);
-		        url=nextLine[lineNumber];
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        System.out.println("The URL is " + url);	
-		        System.out.println("Image Name " +name);
-		        driver.get(url);
-		       
-		    
-		        
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		     
-		        driver.findElement(By.id("phdesktopbody_0_phdesktopproductprimarycontentarea_0_anchrAddToCartLeft")).click();
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
-		        takeScreenPortrait(name);
-		        System.out.println("Image Name " +name);
-		        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
-		        takeScreenLandscape(name);
-		        System.out.println("Image Name " +name);
-		        takeScreenPortrait(name);
-		        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        
-		        
-		        if (browser.equals("mobileiPhone5S")||browser.equals("mobileiPhone4S")||browser.equals("mobileiPhone5")||browser.equals("mobileiPhone5C")||browser.equals("tabletKindleFire2")||browser.equals("tabletKindleFireHD"))
-		        {
-		        	JavascriptExecutor jse = (JavascriptExecutor)driver;
-		        jse.executeScript("scroll(0, 14700)"); //y value '250' can be altered
-		        	   driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
-		        	 name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Scrolled-Capture.png";
-				        System.out.println("Image Name is  " +name);
-				        takeScreenPortrait(name);
-		        }
-		        
-		        counter+=1;
-		    
-
-		      }
-	
-		 driver.get("http://author.pepto-bismol.pgsitecore.com/en-us/shopping-cart");
-	     driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	        name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
+		    name=""+ browser+"/portrait/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-portrait.png";
 	        takeScreenPortrait(name);
 	        System.out.println("Image Name " +name);
 	        name=""+ browser+"/landscape/" + browser +"_"+ counter + "_" + "Successful-Completed-Capture-landscape.png";
@@ -311,6 +274,13 @@ public class AddCartTest {
 	        System.out.println("Image Name " +name);
 	        takeScreenPortrait(name);
 	        driver.manage().timeouts().implicitlyWait(450000, TimeUnit.SECONDS);
+	        
+	        
+		    br = new BufferedReader(new FileReader(csvFileToRead));  
+		    
+		    
+	
+		 
 	    	 driver.quit();   
 		
 	  }
@@ -534,23 +504,7 @@ public class AddCartTest {
 	
 
 
-	 public WebDriver mobileXperia() throws MalformedURLException  
-	 {  
-	  
-		 browser_type="mobileXperia";
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities caps = new DesiredCapabilities();
-		 caps.setCapability("browserName", "android");
-		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Sony Xperia Tipo");
-		 caps.setCapability("browserstack.debug", "true");
-		 caps.setCapability("acceptSslCerts", "true");
-		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run Chrome");
-	      driver.get("http://stage.coffee-mate.com/Registration/Create-Account.aspx?email=" + timeStamp +"%40yahoo.com&stt=True");
-	      
-	      return driver;
-	 }
+	 
 	 
 	 public WebDriver  mobileHTCOneX() throws MalformedURLException  
 	 {  
@@ -571,23 +525,6 @@ public class AddCartTest {
 	      return driver;
 	 }
 	 
-	 public WebDriver mobileRazor() throws MalformedURLException  
-	 {  
-	  
-		 browser_type="mobileRazor";
-		 String URL = "http://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
-		 DesiredCapabilities caps = new DesiredCapabilities();
-		 caps.setCapability("browserName", "android");
-		 caps.setCapability("platform", "ANDROID");
-		 caps.setCapability("device", "Motorola Razr Maxx HD");
-		 caps.setCapability("browserstack.debug", "true");
-		 caps.setCapability("acceptSslCerts", "true");
-		    driver = new RemoteWebDriver(new URL(URL), caps);
-	      System.out.println("Let me run mobileRazor");
-	      driver.get("http://m.yahoo.com");
-	      
-	      return driver;
-	 }
 	 
 	 public WebDriver tabletKindleFire2() throws MalformedURLException  
 	 {  
@@ -1127,5 +1064,5 @@ public class AddCartTest {
 	
 	 } 
 	 }
-
+	 
 }
